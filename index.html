@@ -1,89 +1,276 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <meta name="theme-color" content="#211714" />
   <meta name="description" content="یه هدیه‌ی کوچولوی پاییزی واسه کوثری!" />
+
   <title>برای کوثر | تولدت مبارک</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
+
+  <!-- Background Effects -->
   <div class="grain" aria-hidden="true"></div>
+
   <div class="ambient ambient-one" aria-hidden="true"></div>
   <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <!-- Falling Autumn Leaves -->
   <div id="leaves" class="leaves" aria-hidden="true"></div>
 
-  <button class="sound-toggle" id="soundToggle" type="button" aria-label="روشن یا خاموش کردن موسیقی">
-    <span class="sound-icon">♫</span><span id="soundLabel">موسیقی</span>
+
+  <!-- Music Button -->
+  <button
+    class="sound-toggle"
+    id="soundToggle"
+    type="button"
+    aria-label="روشن یا خاموش کردن موسیقی"
+  >
+    <span class="sound-icon">♫</span>
+    <span id="soundLabel">موسیقی</span>
   </button>
 
+
+  <!-- Main Content -->
   <main class="page-shell">
+
+    <!-- Hero Section -->
     <section class="hero" aria-labelledby="mainTitle">
-      <p class="eyebrow"><span></span> یه هدیه‌ی کوچولو، برای یه فرشته خاص <span></span></p>
-      <h1 id="mainTitle">برای تو، <em>کوثر</em> جان</h1>
-      <p class="hero-copy">بعضی روزها فقط توی تقویم خاص نیستن؛<br class="desktop-break"> با بودنِ بعضی آدما خاص میشن</p>
-      <div class="hero-divider"><i></i><span>✦</span><i></i></div>
+
+      <p class="eyebrow">
+        <span></span>
+        یه هدیه‌ی کوچولو، برای یه فرشته خاص
+        <span></span>
+      </p>
+
+      <h1 id="mainTitle">
+        برای تو، <em>کوثر</em> جان
+      </h1>
+
+      <p class="hero-copy">
+        بعضی روزها فقط توی تقویم خاص نیستن؛
+        <br class="desktop-break">
+        با بودنِ بعضی آدما خاص میشن
+      </p>
+
+      <div class="hero-divider">
+        <i></i>
+        <span>✦</span>
+        <i></i>
+      </div>
+
     </section>
 
+
+    <!-- Birthday Cake -->
     <section class="birthday-card" aria-label="کیک تولد">
+
       <div class="card-glow"></div>
-      <div class="tiny-stars" aria-hidden="true">✦　·　✧　　·　✦</div>
+
+      <div class="tiny-stars" aria-hidden="true">
+        ✦　·　✧　　·　✦
+      </div>
+
       <div class="cake-wrap">
+
         <div class="flame flame-one"></div>
         <div class="flame flame-two"></div>
         <div class="flame flame-three"></div>
-        <div class="candles"><span></span><span></span><span></span></div>
+
+        <div class="candles">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
         <div class="cake-top"></div>
-        <div class="cake-layer layer-top"><span class="icing-drip"></span></div>
-        <div class="cake-layer layer-bottom"><span class="icing-drip"></span></div>
+
+        <div class="cake-layer layer-top">
+          <span class="icing-drip"></span>
+        </div>
+
+        <div class="cake-layer layer-bottom">
+          <span class="icing-drip"></span>
+        </div>
+
         <div class="cake-plate"></div>
+
       </div>
-      <p class="cake-caption">امشب، نوبت آرزوهای قشنگ توئه…</p>
+
+      <p class="cake-caption">
+        امشب، نوبت آرزوهای قشنگ توئه…
+      </p>
+
     </section>
 
-    <section class="wish-section">
-      <p class="section-kicker">A LITTLE WISH FOR YOU</p>
-      <h2>به دنیای قشنگِ <span>آبان</span> خوش اومدی 🍁</h2>
-      <p class="wish-intro">قبل از اینکه آرزوت رو فوت کنی، یه نامه‌ی کوچیک برات دارم.</p>
 
-      <button class="envelope-button" id="openLetter" type="button" aria-expanded="false" aria-controls="letter">
-        <span class="envelope" aria-hidden="true"><span class="envelope-heart">♥</span></span>
-        <span class="open-hint">برای باز کردن نامه لمس کن</span>
+    <!-- Birthday Wish Section -->
+    <section class="wish-section">
+
+      <p class="section-kicker">
+        A LITTLE WISH FOR YOU
+      </p>
+
+      <h2>
+        به دنیای قشنگِ <span>آبان</span> خوش اومدی 🍁
+      </h2>
+
+      <p class="wish-intro">
+        قبل از اینکه آرزوت رو فوت کنی، یه نامه‌ی کوچیک برات دارم.
+      </p>
+
+
+      <!-- Envelope Button -->
+      <button
+        class="envelope-button"
+        id="openLetter"
+        type="button"
+        aria-expanded="false"
+        aria-controls="letter"
+      >
+
+        <span class="envelope" aria-hidden="true">
+          <span class="envelope-heart">♥️</span>
+        </span>
+
+        <span class="open-hint">
+          برای باز کردن نامه لمس کن
+        </span>
+
       </button>
 
-     <article class="letter" id="letter" aria-hidden="true">
+
+      <!-- Birthday Letter -->
+      <article
+        class="letter"
+        id="letter"
+        aria-hidden="true"
+      >
+
         <div class="letter-inner">
-          <div class="letter-top">✧ &nbsp; با مهر و آرزوی خوب &nbsp; ✧</div>
-          <h3>کوثر جان، تولدت مبارک! ❤️</h3>
-          <p>امیدوارم وقتی که پا به روز جدید از سال جدیدت گذاشتی 
-با بهترینن اتفاق روبرو بشی</p>
-          <p>ثانیه‌هات ، دقایقت ، ساعت‌ها و روزها و ماه‌ها همه به خوبی بگذرن </p>
-          <p>لبخندت که همیشه تو خاطرم چیزی به جز آرامش و قشنگی نداره روی لبات باشه </p>
-          <p class="letter-last">چشمای ناز و مهربونت همیشه خوشحال باشن و اتفاقات بد جرئت نکنن روزای تو رو خراب کنن </p>
-          <p>دانشگاه و درسات ، زندگی و دوستی‌ها و کارت تو بهترین حالت پیش بره</p>
-          <p>آرزوهای قشنگ خیلی زیاده کوثرجان </p>
-          <p>همه‌اش برای تو و برای این روز مقدس و مهم 
-خیلی خیلی تبریک میگم بهت </p>
-          <div class="letter-sign">تولدت مبارک، دختر خاص آبان‌ماهی 🍂</div>
+
+          <div class="letter-top">
+            ✧ &nbsp; با مهر و آرزوی خوب &nbsp; ✧
+          </div>
+
+          <h3>
+            کوثر جان، تولدت مبارک! ❤️
+          </h3>
+
+          <p>
+            امیدوارم وقتی که پا به روز جدید از سال جدیدت گذاشتی
+            با بهترین اتفاق روبرو بشی.
+          </p>
+
+          <p>
+            ثانیه‌هات، دقایقت، ساعت‌ها و روزها و ماه‌ها
+            همه به خوبی بگذرن.
+          </p>
+
+          <p>
+            لبخندت که همیشه تو خاطرم چیزی به جز آرامش و قشنگی نداره،
+            روی لبات باشه.
+          </p>
+
+          <p class="letter-last">
+            چشمای ناز و مهربونت همیشه خوشحال باشن
+            و اتفاقات بد جرئت نکنن روزای تو رو خراب کنن.
+          </p>
+
+          <p>
+            دانشگاه و درسات، زندگی و دوستی‌ها و کارت
+            تو بهترین حالت پیش بره.
+          </p>
+
+          <p>
+            آرزوهای قشنگ خیلی زیاده کوثرجان.
+          </p>
+
+          <p>
+            همه‌اش برای تو و برای این روز مقدس و مهم،
+            خیلی خیلی تبریک میگم بهت.
+          </p>
+
+          <div class="letter-sign">
+            تولدت مبارک، دختر خاص آبان‌ماهی 🍂
+          </div>
+
         </div>
+
       </article>
+
     </section>
 
+
+    <!-- Final Section -->
     <section class="finale">
+
       <div class="finale-line"></div>
-      <p>امشب یه آرزو کن…</p>
-      <h2>شاید قشنگ‌ترین سالت<br><span>از همین‌جا شروع بشه.</span></h2>
-      <button id="wishButton" class="wish-button" type="button">✨ آرزومو کردم</button>
-      <p id="wishResponse" class="wish-response" aria-live="polite"></p>
+
+      <p>
+        امشب یه آرزو کن…
+      </p>
+
+      <h2>
+        شاید قشنگ‌ترین سالت
+        <br>
+        <span>از همین‌جا شروع بشه.</span>
+      </h2>
+
+      <button
+        id="wishButton"
+        class="wish-button"
+        type="button"
+      >
+        ✨ آرزومو کردم
+      </button>
+
+      <p
+        id="wishResponse"
+        class="wish-response"
+        aria-live="polite"
+      ></p>
+
     </section>
 
-    <footer> با آرزوی بهترین‌ها برای تو از طرف امیر <span>♥</span></footer>
+
+    <!-- Footer -->
+    <footer>
+      با آرزوی بهترین‌ها برای تو از
+      <br>
+      امیر 🩵
+    </footer>
+
   </main>
 
-  <script src="script.js"></script>
+
+  <!-- Custom Birthday Music -->
+  <audio
+    id="birthdayAudio"
+    src="./autumn-song.mp3"
+    preload="none"
+    loop
+  ></audio>
+
+
+  <!-- JavaScript -->
+  <script src="./script.js"></script>
+
 </body>
 </html>
