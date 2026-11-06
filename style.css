@@ -85,4 +85,24 @@ h2 span { color: #e3a46b; }
 .wish-response { min-height: 28px; color: #e8b77f; font-size: 13px; margin-top: 16px; }
 footer { text-align: center; padding: 0 0 30px; color: #987b69; font-size: 11px; } footer span { color: #c87862; }
 @media (max-width: 520px) { .hero { padding-top: 95px; } .hero-copy { font-size: 13px; } .birthday-card { min-height: 275px; margin-bottom: 58px; } .letter-inner { padding-left: 18px; padding-right: 18px; } .letter p { font-size: 12px; } .finale { padding-top: 65px; } }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+/* Mobile rendering: keep the decorative animations smooth on touch devices. */
+.leaf, .flame { -webkit-animation-play-state: running; animation-play-state: running; }
+.leaf { will-change: transform; }
+.flame { will-change: transform, opacity; }
+
+/* Respect reduced-motion preferences without removing the birthday effects entirely. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .leaf { animation-duration: 32s !important; }
+  .flame { animation-duration: 2s !important; }
+  .envelope, .letter, .letter-inner, .sound-toggle, .wish-button {
+    transition-duration: .15s !important;
+  }
+}
+
+
+@media (max-width: 520px) {
+  .leaves { contain: layout paint; }
+  .leaf { backface-visibility: hidden; }
+  .flame { backface-visibility: hidden; }
+}
