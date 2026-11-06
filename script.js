@@ -1,6 +1,6 @@
 const leavesRoot = document.getElementById('leaves');
 const leafSymbols = ['🍂', '🍁', '✦'];
-for (let i = 0; i < 19; i++) {
+for (let i = 0; leavesRoot && i < 19; i++) {
   const leaf = document.createElement('span');
   leaf.className = 'leaf';
   leaf.textContent = leafSymbols[i % leafSymbols.length];
@@ -46,7 +46,12 @@ function playNote() {
   noteIndex++;
 }
 soundToggle.addEventListener('click', async () => {
-  if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContextClass) {
+    soundLabel.textContent = 'موسیقی پشتیبانی نمی‌شود';
+    return;
+  }
+  if (!audioContext) audioContext = new AudioContextClass();
   if (audioContext.state === 'suspended') await audioContext.resume();
   musicOn = !musicOn;
   if (musicOn) {
